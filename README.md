@@ -1,0 +1,149 @@
+# Etherium survey
+
+## setup
+
+```
+% brew install etherium
+```
+
+
+## Run daemon
+
+setup private network.
+```
+% geth --datadir . init myGenesis.json
+```
+
+
+## Run CLI
+
+```
+% geth --datadir "." attach ipc:geth.ipc
+```
+
+```
+> eth.accounts
+[]
+> personal.newAccount("hogehoge01")
+"0x6d3341d8a5314a084a097091c4a0d6d792cbca56"
+> eth.accounts
+["0x6d3341d8a5314a084a097091c4a0d6d792cbca56"]
+> personal.newAccount("hogehoge02")
+"0xb3bae63ea54f3dfaf26ea08bc3862e1eef55c01c"
+> eth.accounts
+["0x6d3341d8a5314a084a097091c4a0d6d792cbca56", "0xb3bae63ea54f3dfaf26ea08bc3862e1eef55c01c"]
+>
+> eth.coinbase
+"0x6d3341d8a5314a084a097091c4a0d6d792cbca56"
+> miner.setEtherbase(eth.accounts[1])
+true
+> eth.coinbase
+"0xb3bae63ea54f3dfaf26ea08bc3862e1eef55c01c"
+> miner.start()
+null
+> miner.stop()
+null
+> eth.blockNumber
+0
+> miner.start()
+null
+> eth.mining
+true
+> eth.hashrate
+0
+> eth.hashrate
+11774
+> eth.hashrate
+11774
+> eth.hashrate
+22131
+> miner.stop()
+null
+> eth.blockNumber
+24
+> eth.getBlock(1)
+{
+  difficulty: 131072,
+  extraData: "0xd983010901846765746888676f312e31322e378664617277696e",
+  gasLimit: 134086657,
+  gasUsed: 0,
+  hash: "0x4529f0f308d01294b5e65a118d3ad92541e005798a6473c1746e89b4317c2d20",
+  logsBloom: "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  miner: "0xb3bae63ea54f3dfaf26ea08bc3862e1eef55c01c",
+  mixHash: "0xb3e9d16d11d790086db82c3c9590ff9bee6308784de11efd09f5e9bf4157f788",
+  nonce: "0x29bc0504ee137827",
+  number: 1,
+  parentHash: "0x7b2e8be699df0d329cc74a99271ff7720e2875cd2c4dd0b419ec60d1fe7e0432",
+  receiptsRoot: "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
+  sha3Uncles: "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+  size: 538,
+  stateRoot: "0x09882d0e65b4a5af352b1823add77b36086b955c31fcfd9de8b30e160375deb8",
+  timestamp: 1565088821,
+  totalDifficulty: 147456,
+  transactions: [],
+  transactionsRoot: "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
+  uncles: []
+}
+> eth.getBlock(2)
+{
+  difficulty: 131072,
+  extraData: "0xd983010901846765746888676f312e31322e378664617277696e",
+  gasLimit: 133955714,
+  gasUsed: 0,
+  hash: "0x926777bc57d6bccd4c35cf48e902f7c82c6eddab994823289a0f0d6489d3cf27",
+  logsBloom: "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  miner: "0xb3bae63ea54f3dfaf26ea08bc3862e1eef55c01c",
+  mixHash: "0x83a9aaee23fe2ca84c98a955ba5a1d83751e3553cb418ed72476d0fced969f1e",
+  nonce: "0x316150b329a6230f",
+  number: 2,
+  parentHash: "0x4529f0f308d01294b5e65a118d3ad92541e005798a6473c1746e89b4317c2d20",
+  receiptsRoot: "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
+  sha3Uncles: "0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347",
+  size: 538,
+  stateRoot: "0x879c5e58e60028f7cd9a019efb8622a668f28386d9098cf7eb194e67b1e174a5",
+  timestamp: 1565088849,
+  totalDifficulty: 278528,
+  transactions: [],
+  transactionsRoot: "0x56e81f171bcc55a6ff8345e692c0f86e5b48e01b996cadc001622fb5e363b421",
+  uncles: []
+}
+
+```
+
+## check balance
+
+```
+> eth.coinbase == eth.accounts[1]
+true
+> eth.getBalance(eth.accounts[1])
+815000000000000000000
+> web3.fromWei(eth.getBalance(eth.accounts[1]),"ether")
+1140
+````
+
+
+## transfer amount
+
+
+```
+> personal.unlockAccount(eth.accounts[0])
+Unlock account 0x6d3341d8a5314a084a097091c4a0d6d792cbca56
+Passphrase:
+true
+> eth.getBalance(eth.accounts[1])
+2.86e+21
+> personal.unlockAccount(eth.accounts[1])
+Unlock account 0xb3bae63ea54f3dfaf26ea08bc3862e1eef55c01c
+Passphrase:
+true
+> eth.sendTransaction({from: eth.accounts[1], to: eth.accounts[0], value: web3.toWei(5, "ether")})
+"0x9e25f0f6d2e85b7a8045730c65af2b93b3a0ae3fbd3c14fc7db0abda4a0d44fb"
+> eth.getBalance(eth.accounts[0])
+0
+> eth.getBalance(eth.accounts[1])
+6.345e+21
+```
+
+- amount cannot be transfered...
+  - https://book.ethereum-jp.net/first_use/sending_ether.html
+
