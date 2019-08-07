@@ -1,0 +1,77 @@
+=============== Aug 6, 2019 (JST) ===============
+19:42:30.948511 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+19:42:31.195079 db@open opening
+19:42:31.198505 version@stat F·[] S·0B[] Sc·[]
+19:42:31.760368 db@janitor F·2 G·0
+19:42:31.762797 db@open done T·565.905935ms
+19:42:31.764619 db@close closing
+19:42:31.764898 db@close done T·273.259µs
+=============== Aug 6, 2019 (JST) ===============
+19:44:19.637284 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+19:44:19.637613 version@stat F·[] S·0B[] Sc·[]
+19:44:19.637665 db@open opening
+19:44:19.637770 journal@recovery F·1
+19:44:19.641769 journal@recovery recovering @1
+19:44:19.655623 memdb@flush created L0@2 N·10 S·536B "H{...~\x042,v3":"r\x00\x00..~\x042,v5"
+19:44:19.660503 version@stat F·[1] S·536B[536B] Sc·[0.25]
+19:44:19.733327 db@janitor F·3 G·0
+19:44:19.733387 db@open done T·95.697713ms
+19:46:10.218837 db@close closing
+19:46:10.219049 db@close done T·208.57µs
+=============== Aug 6, 2019 (JST) ===============
+19:46:22.275601 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+19:46:22.275951 version@stat F·[1] S·536B[536B] Sc·[0.25]
+19:46:22.276004 db@open opening
+19:46:22.276123 journal@recovery F·1
+19:46:22.280213 journal@recovery recovering @3
+19:46:22.296200 memdb@flush created L0@5 N·2 S·241B "Dat..ion,v12":"Las..der,v13"
+19:46:22.302493 version@stat F·[2] S·777B[777B] Sc·[0.50]
+19:46:22.397217 db@janitor F·4 G·0
+19:46:22.397279 db@open done T·121.248142ms
+19:46:25.115723 db@close closing
+19:46:25.115967 db@close done T·239.227µs
+=============== Aug 6, 2019 (JST) ===============
+19:48:03.244495 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+19:48:03.244827 version@stat F·[2] S·777B[777B] Sc·[0.50]
+19:48:03.244878 db@open opening
+19:48:03.245004 journal@recovery F·1
+19:48:03.247889 journal@recovery recovering @6
+19:48:03.275419 memdb@flush created L0@8 N·1 S·216B "Las..der,v15":"Las..der,v15"
+19:48:03.281370 version@stat F·[3] S·993B[993B] Sc·[0.75]
+19:48:03.372624 db@janitor F·5 G·0
+19:48:03.372726 db@open done T·127.806409ms
+19:49:45.213263 db@close closing
+19:49:45.213440 db@close done T·175.17µs
+=============== Aug 6, 2019 (JST) ===============
+19:51:43.259708 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+19:51:43.260039 version@stat F·[3] S·993B[993B] Sc·[0.75]
+19:51:43.260090 db@open opening
+19:51:43.260455 journal@recovery F·1
+19:51:43.263785 journal@recovery recovering @9
+19:51:43.284386 memdb@flush created L0@11 N·1 S·216B "Las..der,v17":"Las..der,v17"
+19:51:43.290408 version@stat F·[4] S·1KiB[1KiB] Sc·[1.00]
+19:51:43.377061 db@janitor F·6 G·0
+19:51:43.377173 db@open done T·117.051504ms
+19:51:43.377363 table@compaction L0·4 -> L1·0 S·1KiB Q·18
+19:51:43.440659 table@build created L1@14 N·11 S·560B "Dat..ion,v12":"r\x00\x00..~\x042,v5"
+19:51:43.440909 version@stat F·[0 1] S·560B[0B 560B] Sc·[0.00 0.00]
+19:51:43.475402 table@compaction committed F-3 S-649B Ke·0 D·3 T·97.904707ms
+19:51:43.476529 table@remove removed @8
+19:51:43.476890 table@remove removed @5
+19:51:43.477088 table@remove removed @2
+=============== Aug 7, 2019 (JST) ===============
+10:49:07.836038 db@close closing
+10:49:07.949265 db@close done T·113.231414ms
+=============== Aug 7, 2019 (JST) ===============
+10:49:11.346213 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+10:49:11.347038 version@stat F·[0 1] S·560B[0B 560B] Sc·[0.00 0.00]
+10:49:11.347127 db@open opening
+10:49:11.347349 journal@recovery F·1
+10:49:11.350962 journal@recovery recovering @12
+10:49:11.420211 memdb@flush created L0@15 N·15638 S·806KiB "H\x00\t..\xbco\xdd,v1336":"\x92s)..L\xc1\x97,v15654"
+10:49:11.424734 version@stat F·[1 1] S·806KiB[806KiB 560B] Sc·[0.25 0.00]
+10:49:11.517568 db@janitor F·5 G·1
+10:49:11.544524 db@janitor removing table-11
+10:49:11.544719 db@open done T·197.555496ms
+10:49:12.904018 db@close closing
+10:49:12.904203 db@close done T·183.597µs

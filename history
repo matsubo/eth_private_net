@@ -1,0 +1,8 @@
+eth.getBlock(0)
+help
+.
+eth
+miner.start()
+eth.blockNumber
+eth.getTransaction('0x287773325e506b112d540402cf99748b0eb1ed0032ae99f04a832680965c3814')
+eth.blockNumber
