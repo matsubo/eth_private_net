@@ -1,9 +1,9 @@
-# Etherium survey
+# Ethereum survey
 
 ## setup
 
 ```
-% brew install etherium
+% brew install ethereum
 ```
 
 
